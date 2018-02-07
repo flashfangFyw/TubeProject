@@ -43,6 +43,7 @@ namespace UnityEngine.XR.iOS
         }
         // Update is called once per frame
         void Update () {
+            UpdateUITouch();
             if (!touchHitFlag) return;
 			if (Input.touchCount > 0 && m_HitTransform != null)
 			{
@@ -74,7 +75,34 @@ namespace UnityEngine.XR.iOS
 				}
 			}
 		}
-
+        private Ray ray;
+        RaycastHit hit;
+        private void UpdateUITouch()
+        {
+            if (Input.touchCount > 0)
+            {
+                var touch = Input.GetTouch(0);
+                //ray = Camera.main.ScreenPointToRay(touch.position);// screenPosition);
+                ray = Camera.main.ScreenPointToRay(touch.position);// screenPosition);
+                                                                   //Graphics.ray
+                Debug.Log("Raycast=" + Physics.Raycast(ray, out hit, 100));
+                if (Physics.Raycast(ray, out hit, 100))
+                {
+                    Debug.DrawLine(ray.origin, hit.point, Color.green);
+                    Debug.Log(" hit.collider.gameObject.name=" + hit.collider.gameObject.name);
+                    Debug.Log(" hit.collider.gameObject.transform.localScale=" + hit.collider.gameObject.transform.localScale);
+                    if (hit.collider.gameObject.name=="add")
+                    {
+                        hit.collider.gameObject.transform.parent.BroadcastMessage("AddParam", SendMessageOptions.DontRequireReceiver);
+                    }
+                    else
+                    {
+                        hit.collider.gameObject.transform.parent.BroadcastMessage("ReduceParam", SendMessageOptions.DontRequireReceiver);
+                    }
+                   
+                }
+            }
+        }
 	
 	}
 }

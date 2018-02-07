@@ -1087,6 +1087,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 150089123}
   m_Mesh: {fileID: 4300036, guid: 826497dcc190ad647bfbed92c439cf49, type: 3}
+--- !u!1 &155199524 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1354312822027498, guid: 7432eccd37fcbb94ba4f05888cbd9d4f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1434668145}
+--- !u!65 &155199525
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 155199524}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 100, y: 100, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &156796208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1505,6 +1522,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 209305462}
   m_Mesh: {fileID: 4300008, guid: 10002daea152fa04ba35329fc131309e, type: 3}
+--- !u!1 &222748015 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1947537256565158, guid: 7432eccd37fcbb94ba4f05888cbd9d4f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1434668145}
+--- !u!114 &222748016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222748015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 640afac6a1aa478449b19637d5a64efd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showTxt: {fileID: 570989028}
 --- !u!1 &229804520
 GameObject:
   m_ObjectHideFlags: 0
@@ -2780,6 +2814,23 @@ MonoBehaviour:
     type: 2}
   maxPointsToShow: 10000
   particleSize: 0.01
+--- !u!1 &513288773 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1552547971438792, guid: 7432eccd37fcbb94ba4f05888cbd9d4f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1434668145}
+--- !u!65 &513288774
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 513288773}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 100, y: 100, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &542187793
 GameObject:
   m_ObjectHideFlags: 0
@@ -7158,6 +7209,7 @@ MonoBehaviour:
   - {fileID: 1726752254}
   - {fileID: 954720516}
   - {fileID: 1191572400}
+  plane: {fileID: 0}
 --- !u!1 &1288989204
 GameObject:
   m_ObjectHideFlags: 0
@@ -8518,6 +8570,14 @@ Prefab:
         type: 2}
       propertyPath: m_FontData.m_MaxSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552547971438792, guid: 7432eccd37fcbb94ba4f05888cbd9d4f, type: 2}
+      propertyPath: m_Name
+      value: add
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354312822027498, guid: 7432eccd37fcbb94ba4f05888cbd9d4f, type: 2}
+      propertyPath: m_Name
+      value: reduce
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7432eccd37fcbb94ba4f05888cbd9d4f, type: 2}
