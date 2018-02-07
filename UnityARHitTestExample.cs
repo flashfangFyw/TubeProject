@@ -30,6 +30,7 @@ namespace UnityEngine.XR.iOS
                     m_HitTransform.rotation = UnityARMatrixOps.GetRotation (hitResult.worldTransform);
                     SetObjList(true);
                     if (plane) plane.unityARAnchorManager.Destroy();
+                    touchHitFlag = false;
                      Debug.Log (string.Format ("x:{0:0.######} y:{1:0.######} z:{2:0.######}", m_HitTransform.position.x, m_HitTransform.position.y, m_HitTransform.position.z));
                     return true;
                 }
