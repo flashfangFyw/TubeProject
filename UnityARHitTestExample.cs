@@ -7,6 +7,7 @@ namespace UnityEngine.XR.iOS
 	{
 		public Transform m_HitTransform;
         public GameObject[] objList;
+        public UnityARGeneratePlane plane;
 
         private void SetObjList(bool flag)
         {
@@ -27,7 +28,8 @@ namespace UnityEngine.XR.iOS
                     m_HitTransform.position = UnityARMatrixOps.GetPosition (hitResult.worldTransform);
                     m_HitTransform.rotation = UnityARMatrixOps.GetRotation (hitResult.worldTransform);
                     SetObjList(true);
-                    Debug.Log (string.Format ("x:{0:0.######} y:{1:0.######} z:{2:0.######}", m_HitTransform.position.x, m_HitTransform.position.y, m_HitTransform.position.z));
+                    if (plane) plane.unityARAnchorManager.Destroy();
+                     Debug.Log (string.Format ("x:{0:0.######} y:{1:0.######} z:{2:0.######}", m_HitTransform.position.x, m_HitTransform.position.y, m_HitTransform.position.z));
                     return true;
                 }
             }
