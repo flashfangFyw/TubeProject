@@ -8,6 +8,7 @@ namespace UnityEngine.XR.iOS
 		public Transform m_HitTransform;
         public GameObject[] objList;
         public UnityARGeneratePlane plane;
+        private bool touchHitFlag = true;
 
         private void SetObjList(bool flag)
         {
@@ -41,6 +42,7 @@ namespace UnityEngine.XR.iOS
         }
         // Update is called once per frame
         void Update () {
+            if (!touchHitFlag) return;
 			if (Input.touchCount > 0 && m_HitTransform != null)
 			{
 				var touch = Input.GetTouch(0);
